@@ -21,6 +21,9 @@ app.get("/help",(req,res)=>{
     res.send("You contacted help path");
 });
 
+app.get("*",(req,res)=>{
+    res.send("This path does not exist");
+});
 // app.use((req,res)=>{
 //     console.log("Request Recieved");
 //     let code = "<h1>Fruits</h1><ul><li>Apple</li><li>Orange</li><li>Kiwi</li><li>Pineapple</li></ul>"
