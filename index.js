@@ -9,8 +9,20 @@ app.listen(port,() => {
     console.log(`app is listening on port ${port}`)
 });
 
-app.use((req,res)=>{
-    console.log("Request Recieved");
-    let code = "<h1>Fruits</h1><ul><li>Apple</li><li>Orange</li><li>Kiwi</li><li>Pineapple</li></ul>"
-    res.send(code);
+app.get("/",(req,res)=>{
+    res.send("You contacted root path");
 });
+
+app.get("/home",(req,res)=>{
+    res.send("You contacted home path");
+});
+
+app.get("/help",(req,res)=>{
+    res.send("You contacted help path");
+});
+
+// app.use((req,res)=>{
+//     console.log("Request Recieved");
+//     let code = "<h1>Fruits</h1><ul><li>Apple</li><li>Orange</li><li>Kiwi</li><li>Pineapple</li></ul>"
+//     res.send(code);
+// });
