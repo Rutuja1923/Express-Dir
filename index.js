@@ -20,7 +20,10 @@ app.get("/users",(req,res)=>{
 app.get("/users/:userName/:userId",(req,res)=>{
     const userName= req.params.userName;
     const userId = req.params.userId;
-    res.send(`User ID is: ${userId}<br>User Name is: ${userName}`);
+    console.log(`User ID is: ${userId}`);
+    console.log(`User Name is: ${userName}`);
+    let htmlStr = `<h1>Welcome ${userName}</h1>`;
+    res.send(htmlStr);
 });
 
 app.get("*",(req,res)=>{
