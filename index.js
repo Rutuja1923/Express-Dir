@@ -37,6 +37,10 @@ app.put('/user', (req, res) => {
     res.send('Got a PUT request at /user');
 });
 
+app.delete('/user', (req, res) => {
+    res.send('Got a DELETE request at /user');
+});
+
 // app.use((req,res)=>{
 //     console.log("Request Recieved");
 //     let code = "<h1>Fruits</h1><ul><li>Apple</li><li>Orange</li><li>Kiwi</li><li>Pineapple</li></ul>"
