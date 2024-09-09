@@ -21,6 +21,10 @@ app.get("/help",(req,res)=>{
     res.send("You contacted help path");
 });
 
+app.get("/user",(req,res)=>{
+    res.send("You contacted User path");
+});
+
 app.get("*",(req,res)=>{
     res.send("This path does not exist");
 });
