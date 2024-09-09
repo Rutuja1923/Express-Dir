@@ -25,6 +25,13 @@ app.get("/users/:userName/:userId",(req,res)=>{
     let htmlStr = `<h1>Welcome ${userName}</h1>`;
     res.send(htmlStr);
 });
+app.get("/search",(req,res)=>{
+    let {q} = req.query;
+    if(!q){
+        res.send(`<h1>Nothing Searched</h1>`);
+    }
+    res.send(`<h1>Search results for query: ${q}</h1>`);
+});
 
 app.get("*",(req,res)=>{
     res.send("This path does not exist");
