@@ -24,6 +24,11 @@ app.get("/help",(req,res)=>{
 app.get("*",(req,res)=>{
     res.send("This path does not exist");
 });
+
+app.post("/",(req,res)=>{
+    res.send("You sent a POST request to root");
+});
+
 // app.use((req,res)=>{
 //     console.log("Request Recieved");
 //     let code = "<h1>Fruits</h1><ul><li>Apple</li><li>Orange</li><li>Kiwi</li><li>Pineapple</li></ul>"
