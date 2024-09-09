@@ -17,6 +17,12 @@ app.get("/users",(req,res)=>{
     res.send("You contacted Users path");
 });
 
+app.get("/users/:userName/:userId",(req,res)=>{
+    const userName= req.params.userName;
+    const userId = req.params.userId;
+    res.send(`User ID is: ${userId}<br>User Name is: ${userName}`);
+});
+
 app.get("*",(req,res)=>{
     res.send("This path does not exist");
 });
